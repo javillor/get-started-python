@@ -74,10 +74,10 @@ def put_visitor():
     if client:
         data = {'name':request.json['name']}
         db.create_document(data)
-        return 'Hello %s! I added you to the database.' % user
+        return 'Hola %s! Te he añadido a la base de datos.' % user
     else:
         print('No database')
-        return 'Hello %s!' % user
+        return 'Hola %s!' % user
 
 @atexit.register
 def shutdown():
